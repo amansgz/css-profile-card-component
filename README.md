@@ -4,5 +4,5 @@
 
 This is a solution for [Profile Card Component](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ) challenge.
 
-[Live site](https://codernami.github.io/css-profile-card-component/)
+[Live site](https://amansgz.github.io/css-profile-card-component/)
 ![preview screenshot](./images/preview.png)
