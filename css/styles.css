@@ -6,73 +6,68 @@
     --dark-gray: hsl(0, 0%, 59%);
     --light-dark-gray: hsl(0, 0%, 80%);
 }
-
+*,
+*:before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html  {
+    height: 100%;
+}
 body {
     background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
-    background-repeat: no-repeat, no-repeat;
+    background-repeat: no-repeat;
     background-position: right 35vw bottom 50vh, left 30vw top 50vh;
     background-color: var(--dark-cyan);
     font-family: 'Kumbh Sans', sans-serif;
-    overflow: hidden;
 }
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+main {
+    display: grid;
+    place-content: center;
     height: 100vh;
 }
 .card {
     width: 330px;
-    height: 360px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3rem;
+    padding-bottom: 1em;
     background-color: var(--card-bg-color);
     border-radius: 10px;
     overflow: hidden;
 }
 .card__header {
-    position: relative;
-    height: 130px;
+    height: 150px;
     background-image: url('../images/bg-pattern-card.svg');
 }
-.card__img {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
+/* Card body */
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user__photo {
     background-color: var(--card-bg-color);
     border: 5px solid var(--card-bg-color);
     border-radius: 50%;
+    transform: translateY(-50%);
 }
-.card__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100px;
-    padding-top: 15px;
-    padding-bottom: 20px;
+.user__wrapper {
+    margin-top: -2rem;
+    text-align: center;
 }
-.card__text {
-    margin: 0;
-    line-height: 1.5;
+.user__name {
     font-size: 18px;
-    font-weight: 700;
-}
-.card__text--name {
     font-weight: 900;
     color: var(--very-dark-desaturated-blue);
 }
-
-.card__text--age {
-    padding-left: 3px;
+.user__age {
+    padding-left: .3em;
     font-size: 16px;
     font-weight: 500;
     color: var(--dark-grayish-blue);
 }
-.card__text--city {
-    padding-top: 5px;
+.user__city {
+    padding: 1em 0;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -80,29 +75,49 @@ body {
 }
 .card__footer {
     display: flex;
-    justify-content: space-between;
-    padding-top: .5rem;
+    justify-content: center;
+    gap: 3em;
+    padding-top: 1em;
     border-top: 1px solid var(--light-dark-gray);
 }
-.card__stats {
-    width: 100%;
-    text-align: center;    
+.stats__followers,
+.stats__likes {
+    text-align: center;
 }
-.card__number {
-    display: flex;
-    flex-direction: column;
+.stats__followers p,
+.stats__likes p,
+.stats__photos p {
     font-size: 18px;
     font-weight: bolder;
     line-height: 1.5;
     color: var(--very-dark-desaturated-blue);
 }
 
-.card__text--light {
-    padding: 0 .3rem;
+.stats__followers span,
+.stats__likes span,
+.stats__photos span {
+    display: block;
     font-size: 10px;
     font-weight: 700;
     color: var(--dark-gray);
     letter-spacing: 1.5px;
+}
+
+
+.footer {
+  margin-top: auto;
+  padding: 2em;
+  text-align: center;
+  color: var(--white);
+}
+.footer__attribution a {
+  text-decoration: none;
+  color: var(--dark-gray);
+  transition: color .1s ease;
+}
+.footer__attribution a:hover,
+.footer__attribution a:focus-visible {
+  color: var(--light-dark-gray);
 }
 
 @media screen and (min-width: 768px) {
