@@ -1,6 +1,6 @@
 :root {
     --dark-cyan: hsl(185, 75%, 39%);
-    --card-bg-color: #FFF;
+    --white: #FFF;
     --very-dark-desaturated-blue: hsl(229, 23%, 23%);
     --dark-grayish-blue: hsl(227, 10%, 46%);
     --dark-gray: hsl(0, 0%, 59%);
@@ -31,7 +31,7 @@ main {
 .card {
     width: 330px;
     padding-bottom: 1em;
-    background-color: var(--card-bg-color);
+    background-color: var(--white);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -46,8 +46,8 @@ main {
     align-items: center;
 }
 .user__photo {
-    background-color: var(--card-bg-color);
-    border: 5px solid var(--card-bg-color);
+    background-color: var(--white);
+    border: 5px solid var(--white);
     border-radius: 50%;
     transform: translateY(-50%);
 }
@@ -112,12 +112,12 @@ main {
 }
 .footer__attribution a {
   text-decoration: none;
-  color: var(--dark-gray);
+  color: var(--white);
   transition: color .1s ease;
 }
 .footer__attribution a:hover,
 .footer__attribution a:focus-visible {
-  color: var(--light-dark-gray);
+  color: var(--very-dark-desaturated-blue);
 }
 
 @media screen and (min-width: 768px) {
